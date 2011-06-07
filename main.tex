@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File :   main.tex
+% Author : Romain Goffe <romain.goffe@gmail.com>
+% Date :   06/07/2011
+% Description : main class for cv
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter\def\input@path{{style/} {tex/} {bib/}}\makeatother
+\documentclass{cv}
+
+%-----------------------------------------------------------------------
+%personal information
+\photo[r]{photo}
+\photoscale{0.15}
+\leftheader{\textbf{GOFFE Romain}\\
+  25 ans, Célibataire, Permis B\\
+  apt 86, 9 rue des Sablons, \\
+  14\,000 Caen, France\\
+  tél: 06.99.57.67.68\\
+  mail: \href{mailto:romain.goffe@gmail.com}{\texttt{romain.goffe@gmail.com}}\\
+}
+
+%-----------------------------------------------------------------------
+%title
+\title{Doctorant en Informatique et Applications}
+\subtitle{Construction top-down de pyramides irrégulières pour le
+  traitement d'images histologiques}
+
+%-----------------------------------------------------------------------
+%master document
+\begin{document}
+\makeheaders[t]
+\maketitle
+
+\makerubric{formation}
+\makerubric{experience}
+\makerubric{publis}
+\makerubric{competences}
+\makerubric{loisirs}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
