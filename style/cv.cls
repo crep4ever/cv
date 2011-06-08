@@ -41,6 +41,10 @@
   citecolor=tango-green-3,
   urlcolor=tango-blue-3]{hyperref}
 
+\newif{\iffr}
+\DeclareOption{fr}{\frtrue}
+\ProcessOptions
+
 %-----------------------------------------------------------------------
 %figures
 \graphicspath{ {img/} }
@@ -69,8 +73,11 @@
 \keyfont{\fontfamily{pag}\selectfont\bfseries}
 
 \prefix{\ding{52}}
+\iffr
 \continuedname{~~(suite)}
-
+\else
+\continuedname{~~(cont.)}
+\fi
 %-----------------------------------------------------------------------
 %rubrics
 \pagestyle{empty}

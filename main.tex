@@ -1,16 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% File :   main.tex
+% File :   main-fr.tex
 % Author : Romain Goffe <romain.goffe@gmail.com>
 % Date :   06/07/2011
 % Description : main class for cv
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter\def\input@path{{style/} {tex/} {bib/}}\makeatother
 \documentclass{cv}
+%\documentclass[fr]{cv}
 
 %-----------------------------------------------------------------------
 %personal information
 \photo[r]{photo}
 \photoscale{0.15}
+\iffr
 \leftheader{\textbf{GOFFE Romain}\\
   25 ans, Célibataire, Permis B\\
   apt 86, 9 rue des Sablons, \\
@@ -18,12 +20,26 @@
   tél: 06.99.57.67.68\\
   mail: \href{mailto:romain.goffe@gmail.com}{\texttt{romain.goffe@gmail.com}}\\
 }
+\else
+\leftheader{\textbf{GOFFE Romain}\\
+  25 years old, bachelor, driving license\\
+  apt 86, 9 rue des Sablons, \\
+  14\,000 Caen, France\\
+  phone: +33(0)6.99.57.67.68\\
+  mail: \href{mailto:romain.goffe@gmail.com}{\texttt{romain.goffe@gmail.com}}\\
+}
+\fi
 
 %-----------------------------------------------------------------------
 %title
+\iffr
 \title{Doctorant en Informatique et Applications}
 \subtitle{Construction top-down de pyramides irrégulières pour le
   traitement d'images histologiques}
+\else
+\title{PhD student in Computer Science}
+\subtitle{Top-down irregular pyramids for large histological images segmentation}
+\fi
 
 %-----------------------------------------------------------------------
 %master document
@@ -31,11 +47,21 @@
 \makeheaders[t]
 \maketitle
 
+\iffr
+\selectlanguage{french}
 \makerubric{education-fr}
 \makerubric{experience-fr}
 \makerubric{publications-fr}
 \makerubric{skills-fr}
-\makerubric{hobbies-fr}
+\makerubric{activities-fr}
+\else
+\selectlanguage{english}
+\makerubric{education-en}
+\makerubric{experience-en}
+\makerubric{publications-en}
+\makerubric{skills-en}
+\makerubric{activities-en}
+\fi
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
